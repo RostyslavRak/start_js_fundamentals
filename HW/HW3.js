@@ -1,58 +1,71 @@
-// //task №1
-// let arr1 = [2, 3, 4, 5];
-// let prod = 1;
-// for (let i = 0; i < arr1.length; i ++) {
-//   prod = prod*arr1[i];
-// }
-// console.log(prod);
+//task №1
+let arr1 = [2, 3, 4, 5];
+let prod = 1;
+for (let i = 0; i < arr1.length; i ++) {
+  prod = prod*arr1[i];
+}
+console.log("task №1_0 " + prod);
 
-// let arr2 = [2, 3, 4, 5];
-// let b = 0;
-// let prod1 = 1;
-// while (b < arr2.length) {
-//   prod1 *= arr2[b];
-//   b ++;
-// }
-// console.log(prod1);
+let arr2 = [2, 3, 4, 5];
+let arr3 = 0;
+let prod1 = 1;
+while (arr3 < arr2.length) {
+  prod1 *= arr2[arr3];
+  arr3 ++;
+}
+console.log("task №1_1 " + prod1);
 
-// //task №2
-// for (let i = 1; i < 15; i ++) {
-//   if (i % 2 == 0) {
-//     console.log(`${i} is even`);
-//   } else {
-//     console.log(`${i} is odd`);
-//   }
-// }
+///////////////task №2
+console.log("task №2")
 
-// //task №3
-// let k = [];
-// function randArray(k) {
-//   for (let i = 0; i < 5; i += 1) {
-//     k.push(Math.floor(Math.random() * 500));
-//   }
-//   return k;
-// }
-// randArray(k);
+for (let i = 1; i < 15; i ++) {
+  if (i % 2 == 0) {
+      console.log(`${i} is even`);
+        } else {
+         console.log(`${i} is odd`);
+    
+  }
+}  
 
-// //task №4
-// let a = prompt("Enter value for (a)", "");
-// let b = prompt("Enter value for (b)", "");
-// if (Number.isInteger(a)) {
-//   console.log(`You have entered ${a}!`) ;
-// } else {
-//   console.log("Enter an integer!");
-// }
-// if (Number.isInteger(b)) {
-//   console.log(`You have entered ${b}!`);
-// } else {
-//     console.log("Enter an integer!!");
-// }
-// function raiseToDegree(a, b) {
-//   return a ** b;
-// }
-// raiseToDegree(a, b);
 
-//task №5
+
+//task №3
+let k = [];
+function randArray(k) {
+  for (let i = 0; i < 5; i += 1) {
+    k.push(Math.floor(Math.random() * 500));
+  }
+  return k;
+}
+console.log("task №3 " + randArray(k));
+
+console.log("task №4");
+let a = Number(prompt("Enter please 'a' number"));
+for(let i = 0; i < 3; i += 1 ){
+    if(!Number.isInteger(a) ){
+        alert('We support only integers. Please try again')
+        a = prompt("Enter please 'a' number");
+    }
+    else break;
+}
+
+let b = Number(prompt("Enter please 'b' number"));
+for(let i = 0; i < 3; i += 1 ){
+    if( !Number.isInteger(b) ){
+        alert('We support only integers. Please try again')
+        b = prompt("Enter please 'a' number");
+    }
+    else break;
+}
+
+function raiseToDegree(a, b){
+    if(Number.isInteger(a) && Number.isInteger(b)) return a ** b;
+    else return "Not integer input was provided"
+}
+
+console.log(`Degreed result: ${raiseToDegree(a, b)} `);
+
+// task №5
 function findMin() {
     let min = arguments[0];
     for (let i = 0; i < arguments.length; i++) {
