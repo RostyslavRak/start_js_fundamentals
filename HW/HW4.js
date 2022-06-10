@@ -9,11 +9,11 @@ function validateValue(value){
     if(isNaN(value)) throw Error(`Passed \"${value}\" value is not a number`)
     else if(Number(value) <= 0) throw Error(`Passed \"${value}\" value is not a valid rectangle side`)
 }
-////****************task 1_1
-// const a = prompt(" EntWer the length 'a' side");
-// const b = prompt(" Enter the length 'b' side");
-const a = 15;
-const b = 10;
+// ////****************task 1_1
+const a = prompt(" Enter the length 'a' side");
+const b = prompt(" Enter the length 'b' side");
+// const a = 15;
+// const b = 10;
 console.log(`Rectangle square : ${calcRectangleArea(a, b)}`)
 
 function calcRectangleArea(width, height) {
